@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "2023-autumn-ab-python-hw-14-team-dev-zotic1001"
+version = "0.1.0"
+description = ""
+authors = ["Pavel Zakharov <zotic1001@gmail.com>", "Dzekalo Andrei"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.5.3"
+psycopg2-binary = "^2.9.9"
+fastapi = "^0.108.0"
+sqlalchemy = "^2.0.24"
+uvicorn = "^0.15.0"
+pydantic-settings = "^2.1.0"
+pyjwt = "^2.7.0"
+passlib = "^1.7.4"
+httpx = "^0.26.0"
+requests = "^2.31.0"
+pytest-mock = "^3.12.0"
+black = "^23.12.1"
+flake8 = "^6.1.0"
+pylint = "^3.0.3"
+mypy = "^1.8.0"
+types-requests = "^2.31.0.20231231"
+types-passlib = "^1.7.7.13"
+types-psycopg2 = "^2.9.21.20"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+alembic = "^1.12.0"
+faker = "^19.10.0"
+
+[tool.black]
+line-length = 80
+skip-string-normalization = true
+
+[tool.flake8]
+ban-todos = true
+
+[tool.mypy]
+plugins = ["sqlalchemy.ext.mypy.plugin"]
+strict = true
+follow_imports = 'silent'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
